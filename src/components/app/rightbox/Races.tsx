@@ -15,7 +15,7 @@ export function Races(): JSX.Element {
 	return (
 		<Fragment>
 			<Subtitle>Races</Subtitle>
-			{RACES.map((v, i) => {
+			{RACES.sort((a, b) => a.name.localeCompare(b.name)).map((v, i) => {
 				return (
 					<EntryBox key={i}>
 						<EntryTitle>{v.name}</EntryTitle>

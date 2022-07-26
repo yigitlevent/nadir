@@ -20,13 +20,13 @@ export const RELIGIONS: nadir.data.Religion[] = [
 		skill: "Hiding"
 	},
 	{
-		name: "Non-practicing",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		skill: undefined
-	},
-	{
 		name: "Thistian Philosophy",
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 		skill: "Researching"
 	},
+	{
+		name: "Non-practicing",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		skill: undefined
+	}
 ];
