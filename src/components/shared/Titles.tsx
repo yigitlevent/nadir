@@ -4,7 +4,7 @@ export const Title = styled.div`
 	font-size: 2.0em;
 	padding: 4px 6px 4px 16px;
 
-	font-family: "Title";
+	font-family: "Cinzel";
 	text-transform: uppercase;
 	font-weight: bold;
 
@@ -18,7 +18,7 @@ export const Subtitle = styled.div<{ noBorder?: boolean; }>`
 	font-size: 1.7em;
 	padding: 4px 6px 4px 6px;
 
-	font-family: "Title";
+	font-family: "Cinzel";
 
 	border-bottom: ${p => p.noBorder ? "none" : (props: nadir.style.Props) => props.theme.border.medium};
 
@@ -30,7 +30,7 @@ export const Header = styled.div`
 	font-size: 1.7em;
 	padding: 4px 6px 4px 6px;
 
-	font-family: "Title";
+	font-family: "Cinzel";
 
 	border-bottom: ${(props: nadir.style.Props) => props.theme.border.medium};
 

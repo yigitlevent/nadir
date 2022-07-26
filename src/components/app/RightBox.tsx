@@ -5,6 +5,7 @@ import { ClientStore } from "../../store/ClientStore";
 import { Box } from "../shared/Box";
 
 import { Races } from "./rightbox/Races";
+import { Religions } from "./rightbox/Religions";
 
 export function RightBox(): JSX.Element {
 	const { activeMenu } = ClientStore(state => ({ activeMenu: state.activeMenu }), shallow);
@@ -12,6 +13,7 @@ export function RightBox(): JSX.Element {
 	return (
 		<Box grow={0} shrink={0} flexWidth={"600px"}>
 			{(activeMenu === "races-and-cultures") ? <Races /> : null}
+			{(activeMenu === "religions") ? <Religions /> : null}
 		</Box>
 	);
 }
