@@ -23,6 +23,7 @@ export const Button = styled.input.attrs({ type: "button" })`
 export const Input = styled.input`
 	height: 26px;
 	max-height: 100%;
+	width: 100%;
 
 	border: none;
 	background: ${(props: nadir.style.Props) => props.theme.background.input};

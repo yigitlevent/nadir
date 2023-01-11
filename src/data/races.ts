@@ -1,62 +1,120 @@
-export const RACES: nadir.data.Race[] = [
+import { SKILLS } from "./skills";
+import { TRAITS } from "./traits";
+
+export const RACES: nadir.data.RaceEntry[] = [
 	{
-		name: "Human, Luxian",
+		name: "Human",
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		attributeBonus: { Quick: 1, Cunning: 1 },
-		trait: "Pathfinder"
+		attributeBonus: { Will: 1, Constitution: 1 }
 	},
 	{
-		name: "Human, Feon",
+		name: "Elf",
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		attributeBonus: { Persuasive: 2 },
-		trait: "Privilaged"
-	},
-	{
-		name: "Human, Thistian",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		attributeBonus: { Resolute: 1, Cunning: 1 },
-		trait: "Archivist"
-	},
-	{
-		name: "Human, Blacktownian",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-		attributeBonus: { Resolute: 1, Accurate: 1 },
-		trait: "Contacts*"
-	},
-	{
-		name: "Human, Karvosian",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		attributeBonus: { Quick: 1, Accurate: 1 },
-		trait: "Bustler"
-	},
-	{
-		name: "Human, Peasant",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		attributeBonus: { Vigilant: 1, Strong: 1 },
-		trait: "Bushcraft"
-	},
-	{
-		name: "Changeling",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		attributeBonus: { Quick: 1, Cunning: 1 },
-		trait: "Shapeshifter"
-	},
-	{
-		name: "Elf, Rohni",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		attributeBonus: { Vigilant: 2 },
-		trait: "Wisdom of Ages"
-	},
-	{
-		name: "Elf, Davoki",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		attributeBonus: { Discreet: 2 },
-		trait: "Manipulator"
+		attributeBonus: { Wits: 1, Will: 1 }
 	},
 	{
 		name: "Dwarf",
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		attributeBonus: { Strong: 1 },
-		trait: "Earth-bound"
+		attributeBonus: { Strength: 1, Constitution: 1 }
+	},
+	{
+		name: "Myra",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		attributeBonus: { Perception: 1, Wits: 1 }
+	}
+];
+
+export const CULTURE: nadir.data.CultureEntry[] = [
+	{
+		name: "Blacktownian",
+		race: "Human",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		trait: TRAITS[0]
+	},
+	{
+		name: "Feon",
+		race: "Human",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		trait: TRAITS[0]
+	},
+	{
+		name: "Karvosian",
+		race: "Human",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		trait: TRAITS[0]
+	},
+	{
+		name: "Luxian",
+		race: "Human",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		trait: TRAITS[0]
+	},
+	{
+		name: "Peasant",
+		race: "Human",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		trait: TRAITS[0]
+	},
+	{
+		name: "Thistian",
+		race: "Human",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		trait: TRAITS[0]
+	},
+	{
+		name: "Davoki",
+		race: "Elf",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		trait: TRAITS[0]
+	},
+	{
+		name: "Rohni",
+		race: "Elf",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		trait: TRAITS[0]
+	},
+	{
+		name: "Hill",
+		race: "Dwarf",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		trait: TRAITS[0]
+	},
+	{
+		name: "Myran",
+		race: "Myra",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		trait: TRAITS[0]
+	}
+];
+
+export const RELIGIONS: nadir.data.ReligionEntry[] = [
+	{
+		name: "Church of Mal'kath",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		skills: [SKILLS[0], SKILLS[1], SKILLS[2]]
+	},
+	{
+		name: "Cult of the Black Sun",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		skills: [SKILLS[0], SKILLS[1], SKILLS[2]]
+	},
+	{
+		name: "Followers of the Prophet",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		skills: [SKILLS[0], SKILLS[1], SKILLS[2]]
+	},
+	{
+		name: "Thistian Arcana",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		skills: [SKILLS[0], SKILLS[1], SKILLS[2]]
+	},
+	{
+		name: "Stone Lords",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		skills: [SKILLS[0], SKILLS[1], SKILLS[2]]
+	},
+	{
+		name: "Non-practicing",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 	}
 ];

@@ -1,27 +1,27 @@
-export const SKILLS: nadir.data.Skill[] = [
-	{
-		name: "Bargaining",
-		attribute: "Persuasive",
+export const SKILLS: { [key: string]: nadir.data.SkillEntry; } = {
+	"Hiding": {
+		attribute: "Agility",
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 	},
-	{
-		name: "Hiding",
-		attribute: "Discreet",
+	"Thievery": {
+		attribute: "Agility",
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 	},
-	{
-		name: "Intimidating",
-		attribute: "Persuasive",
+
+	"Bargaining": {
+		attribute: "Perception",
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 	},
-	{
-		name: "Researching",
-		attribute: "Cunning",
+	"Lying": {
+		attribute: "Perception",
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 	},
-	{
-		name: "Lying",
-		attribute: "Persuasive",
+	"Intimidating": {
+		attribute: "Perception",
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 	},
-];
+	"Researching": {
+		attribute: "Perception",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+	}
+};

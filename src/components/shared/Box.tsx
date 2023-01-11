@@ -16,14 +16,20 @@ export const OuterBox = styled.div`
 
 export const Box = styled.div<{ grow: number; shrink: number; flexWidth: string; }>`
 	max-width: min(94%, ${p => p.flexWidth});
-	min-height: 400px;	
 	margin: 3px;
-	padding: 4px;
+	padding: 15px 4px;
 
 	background: ${(props: nadir.style.Props) => props.theme.background.element};
 	outline: ${(props: nadir.style.Props) => props.theme.border.medium};
 	
 	flex: ${p => p.grow} ${p => p.shrink} ${p => p.flexWidth};
+	
+	display: flex;
+	flex-flow: row wrap;
+	gap: 10px;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: flex-start;
 `;
 
 export const SubBox = styled.div`

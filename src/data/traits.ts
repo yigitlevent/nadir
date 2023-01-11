@@ -1,4 +1,4 @@
-export const TRAITS: nadir.data.Trait[] = [
+export const TRAITS: nadir.data.TraitEntry[] = [
 	{
 		name: "Archivist",
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."

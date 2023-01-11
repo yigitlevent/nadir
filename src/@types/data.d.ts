@@ -2,56 +2,63 @@ namespace nadir {
 
 	namespace data {
 
-		type AttributeNames = "Accurate" | "Cunning" | "Discreet" | "Persuasive" | "Quick" | "Resolute" | "Strong" | "Vigilant";
+		type AttributeNames = "Agility" | "Strength" | "Constitution" | "Perception" | "Will" | "Wits";
+		type RaceNames = "Human" | "Elf" | "Dwarf" | "Myra";
 
-		type TraitNames = "Bushcraft" | "Privilaged" | "Archivist" | "Contacts*" | "Pathfinder" | "Shapeshifter" | "Wisdom of Ages" | "Manipulator" | "Earth-bound" | "Bustler";
-
-		type SkillNames = "Bargaining" | "Hiding" | "Intimidating" | "Researching" | "Lying";
-
-		interface Race {
-			name: `Human, ${"Luxian" | "Feon" | "Thistian" | "Blacktownian" | "Karvosian" | "Peasant"}` | `Changeling` | `Elf, ${"Rohni" | "Davoki"}` | "Dwarf";
-			description: string;
-			attributeBonus: PartialRecord<AttributeNames, number>;
-			trait: TraitNames;
-		}
-
-		interface Religion {
-			name: "Church of Mal'kath" | "Cult of the Black Sun" | "Followers of the Prophet" | "Old Dôr Religion" | "Non-practicing" | "Thistian Philosophy";
-			description: string;
-			skill?: SkillNames;
-		}
-
-		interface Trait {
-			name: TraitNames;
+		interface TraitEntry {
 			description: string;
 		}
 
-		interface Skill {
-			name: SkillNames;
+		interface SkillEntry {
 			attribute: AttributeNames;
 			description: string;
 		}
 
-		interface Ability {
-			name: "";
-			description: string;
-			rank1: string;
-			rank2: string;
-			rank3: string;
-		}
-
-		interface Spell {
-			name: "";
+		interface AbilityEntry {
+			attribute: AttributeNames;
 			description: string;
 		}
 
-		interface Ritual {
-			name: "";
+		interface SpellEntry {
+			attribute: AttributeNames;
 			description: string;
-			rank1: string;
-			rank2: string;
-			rank3: string;
 		}
+
+		interface RaceEntry {
+			name: RaceNames;
+			description: string;
+			attributeBonus: PartialRecord<AttributeNames, number>;
+		}
+
+		interface CultureEntry {
+			name: string;
+			race: RaceNames;
+			description: string;
+			trait: TraitEntry;
+		}
+
+		interface ReligionEntry {
+			name: "Stone Lords" | "Church of Mal'kath" | "Cult of the Black Sun" | "Followers of the Prophet" | "Thistian Arcana" | "Non-practicing";
+			description: string;
+			skills?: [SkillEntry, SkillEntry, SkillEntry];
+		}
+
+		interface ClientStore {
+			name: string;
+			age: number;
+
+			race?: RaceEntry;
+			culture?: CultureEntry;
+			religion?: ReligionEntry;
+
+			setName: (name: string) => void;
+			setAge: (age: number) => void;
+
+			setRace: (race: RaceEntry) => void;
+			setCulture: (culture: CultureEntry) => void;
+			setReligion: (religion: ReligionEntry) => void;
+		}
+
 	}
 
 }
